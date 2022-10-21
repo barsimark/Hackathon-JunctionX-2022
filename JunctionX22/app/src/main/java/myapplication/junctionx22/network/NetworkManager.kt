@@ -1,5 +1,7 @@
 package myapplication.junctionx22.network
 
+import myapplication.junctionx22.model.CurrencyApiResponse
+import myapplication.junctionx22.model.CurrencyConvertion
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -24,7 +26,7 @@ object NetworkManager {
         currencyApi = retrofit.create(CurrencyApi::class.java)
     }
 
-    fun convert(source: String?, target: String?): Call<CurrencyApi?>? {
+    fun convert(source: String?, target: String?): Call<List<CurrencyConvertion?>>? {
         return currencyApi.convert(source, target)
     }
 }

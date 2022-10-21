@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import myapplication.junctionx22.network.CurrencyApi
+import myapplication.junctionx22.model.CurrencyApiResponse
+import myapplication.junctionx22.model.CurrencyConvertion
 import myapplication.junctionx22.network.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,17 +20,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun convertCurrency() {
-        NetworkManager.convert("EUR", "USD")?.enqueue(object : Callback<CurrencyApi?> {
+        NetworkManager.convert("EUR", "USD")?.enqueue(object : Callback<List<CurrencyConvertion?>> {
             override fun onResponse(
-                call: Call<CurrencyApi?>,
-                response: Response<CurrencyApi?>
+                call: Call<List<CurrencyConvertion?>>,
+                response: Response<List<CurrencyConvertion?>>
             ) {
                 Log.d("TAG", "onResponse: " + response.code())
-                Toast.makeText(this@MainActivity, "Message: " + response.message(), Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "Message: " + response.body(), Toast.LENGTH_LONG).show()
             }
 
             override fun onFailure(
-                call: Call<CurrencyApi?>,
+                call: Call<List<CurrencyConvertion?>>,
                 throwable: Throwable
             ) {
                 throwable.printStackTrace()

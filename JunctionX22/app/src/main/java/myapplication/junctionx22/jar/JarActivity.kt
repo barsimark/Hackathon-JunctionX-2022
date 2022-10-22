@@ -73,7 +73,7 @@ class JarActivity : AppCompatActivity() {
     private fun animateDown(){
         loadGifDown(animate)
         thread {
-            Thread.sleep(1500)
+            Thread.sleep(1400)
             runOnUiThread(){
                 loadGifDown(animate)
             }

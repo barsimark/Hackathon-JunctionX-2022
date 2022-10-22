@@ -23,8 +23,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="430dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginTop="473dp"
+        android:layout_marginStart="22dp"
+        android:text="PlanT"
+        android:background="@android:color/transparent"
         android:autofillHints="Input" />
 
     <TextView
@@ -33,10 +35,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="250dp"
-        android:layout_marginStart="150dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="170dp"
         android:textAlignment="center"
-        android:text="PlanT" />
+        android:textSize="16sp"
+        android:text="" />
 
     <Button
         android:id="@+id/btnConfirm"

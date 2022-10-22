@@ -17,7 +17,7 @@ class NewJarSettingsActivity : AppCompatActivity() {
 
         binding.etInput.doAfterTextChanged {
             if (binding.etInput.text.isEmpty()){
-                binding.tvInput.text = "PlanT"
+                binding.tvInput.text = ""
             }
             else {
                 binding.tvInput.text = binding.etInput.text

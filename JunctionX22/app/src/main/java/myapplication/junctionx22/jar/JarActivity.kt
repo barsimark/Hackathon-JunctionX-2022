@@ -22,7 +22,10 @@ class JarActivity : AppCompatActivity() {
             startActivity(Intent(this, JarAddActivity::class.java))
         }
 
-        //initRecyclerView()
+        binding.btnWithdraw.setOnClickListener {
+            JarItemManager.addItem(JarItem("Withdrawal", -2000))
+            adapter.updateAll(JarItemManager.getItems())
+        }
     }
 
     override fun onResume() {

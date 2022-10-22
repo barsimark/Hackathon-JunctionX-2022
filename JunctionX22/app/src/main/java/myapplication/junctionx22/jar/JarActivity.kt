@@ -5,8 +5,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import myapplication.junctionx22.MyApplication
 import myapplication.junctionx22.R
 import myapplication.junctionx22.databinding.ActivityJarBinding
+import myapplication.junctionx22.model.Globals
 import myapplication.junctionx22.model.JarItem
 import myapplication.junctionx22.model.JarItemManager
 import kotlin.concurrent.thread
@@ -31,7 +34,10 @@ class JarActivity : AppCompatActivity() {
             JarItemManager.addItem(JarItem("Withdrawal", -2000))
             adapter.updateAll(JarItemManager.getItems())
             animateDown()
+            binding.tvJarSum.text = "${JarItemManager.getSum()} / ${Globals.getTarget()} JPY"
         }
+
+        binding.tvJarName.text = Globals.getJarName()
     }
 
     override fun onResume() {
@@ -39,6 +45,11 @@ class JarActivity : AppCompatActivity() {
 
         initRecyclerView()
         animateUp()
+        binding.tvJarSum.text = "${JarItemManager.getSum()} / ${Globals.getTarget()} JPY"
+
+        if (JarItemManager.getSum() >= Globals.getTarget()){
+            DiscountDialogFragment().show(supportFragmentManager, DiscountDialogFragment::class.java.simpleName)
+        }
     }
 
     private fun initRecyclerView(){
@@ -52,7 +63,7 @@ class JarActivity : AppCompatActivity() {
     private fun animateUp(){
         loadGifUp(animate)
         thread {
-            Thread.sleep(1700)
+            Thread.sleep(1600)
             runOnUiThread(){
                 loadGifUp(animate)
             }
@@ -74,6 +85,7 @@ class JarActivity : AppCompatActivity() {
             Glide.with(this)
                 .asGif()
                 .load(R.raw.tree_from_zero_to_max)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.gifImageView)
 
             false
@@ -81,6 +93,7 @@ class JarActivity : AppCompatActivity() {
             Glide.with(this)
                 .asGif()
                 .load(R.raw.full_tree)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.gifImageView)
 
             true
@@ -92,6 +105,7 @@ class JarActivity : AppCompatActivity() {
             Glide.with(this)
                 .asGif()
                 .load(R.raw.tree_from_max_back_to_zero)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.gifImageView)
 
             false
@@ -99,6 +113,7 @@ class JarActivity : AppCompatActivity() {
             Glide.with(this)
                 .asGif()
                 .load(R.raw.zero_tree)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.gifImageView)
 
             true

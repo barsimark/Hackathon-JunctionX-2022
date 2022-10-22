@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/new_jar_settings"
+        android:src="@drawable/add_jar_with_target"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,22 +21,12 @@
         android:id="@+id/etInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="208dp"
+        android:autofillHints="Input"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="430dp"
-        android:layout_marginStart="55dp"
-        android:autofillHints="Input" />
-
-    <TextView
-        android:id="@+id/tvInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="250dp"
-        android:layout_marginStart="150dp"
-        android:textAlignment="center"
-        android:text="PlanT" />
+        android:text="PlanT"/>
 
     <Button
         android:id="@+id/btnConfirm"

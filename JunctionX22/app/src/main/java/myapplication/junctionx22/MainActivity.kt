@@ -12,6 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import myapplication.junctionx22.databinding.ActivityMainBinding
+import myapplication.junctionx22.jar.DiscountDialogFragment
 import myapplication.junctionx22.jar.JarActivity
 import myapplication.junctionx22.jar.NewJarCategoryActivity
 

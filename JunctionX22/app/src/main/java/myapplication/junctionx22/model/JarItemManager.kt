@@ -15,4 +15,14 @@ object JarItemManager {
         val reversed: MutableList<JarItem> = items.reversed().toMutableList()
         return reversed
     }
+
+    fun getSum(): Int{
+        var sum = 0
+
+        for (i in items){
+            sum += i.sum
+        }
+
+        return sum
+    }
 }

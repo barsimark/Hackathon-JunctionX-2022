@@ -65,8 +65,6 @@ class JarAddActivity : AppCompatActivity() {
                 isValid = true
                 binding.btnAddToJar.isEnabled = true
                 fillTextViews()
-
-                Toast.makeText(this@JarAddActivity, "Message: " + convertion.rate, Toast.LENGTH_LONG).show()
             }
 
             override fun onFailure(

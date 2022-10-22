@@ -24,7 +24,9 @@
         app:layout_constraintTop_toBottomOf="@id/planeImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/wise_extrabold_font"
+        android:textSize="16dp"/>
 
     <TextView
         android:id="@+id/tvJarSum"
@@ -34,7 +36,9 @@
         app:layout_constraintTop_toBottomOf="@id/tvJarName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/wise_extrabold_font"
+        android:textSize="32dp"/>
 
     <ImageView
         android:id="@+id/addWithImage"

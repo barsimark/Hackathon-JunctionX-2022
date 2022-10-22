@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import myapplication.junctionx22.R
 import myapplication.junctionx22.databinding.ActivityJarBinding
 import myapplication.junctionx22.model.JarItem
+import myapplication.junctionx22.model.JarItemManager
 
 class JarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJarBinding
@@ -29,8 +30,6 @@ class JarActivity : AppCompatActivity() {
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
         binding.recyclerview.adapter = adapter
 
-        adapter.addItem(JarItem("Add money directly", 10000))
-        adapter.addItem(JarItem("Purchase percentage", 145))
-        adapter.addItem(JarItem("Recurring transfer", 1000))
+        adapter.updateAll(JarItemManager.getItems())
     }
 }

@@ -10,11 +10,23 @@ import myapplication.junctionx22.network.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import myapplication.junctionx22.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+		binding = ActivityMainBinding.inflate(layoutInflater)
+		setContentView(binding.root)
+
+        binding.btnExistingJar.setOnClickListener {
+            Toast.makeText(this, "Existing jar button", Toast.LENGTH_LONG).show()
+        }
+        binding.btnAddNewJar.setOnClickListener {
+            Toast.makeText(this, "Add new jar button", Toast.LENGTH_LONG).show()
+        }
 
         convertCurrency()
     }

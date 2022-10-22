@@ -23,8 +23,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="150dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginStart="30dp"
+        android:textSize="20dp"
+        android:textColor="@color/light_blue"
         android:inputType="numberDecimal"
         android:autofillHints="Input" />
 
@@ -34,15 +36,15 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="239dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginStart="50dp"
         android:text="5000" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvInput"
+        app:layout_constraintBottom_toBottomOf="@id/tvInput"
         android:src="@drawable/convert_line"
         android:scaleType="fitCenter"
         android:maxHeight="50dp"
@@ -57,8 +59,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="272dp"
-        android:layout_marginStart="75dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="50dp"
         android:text="0.12345678" />
 
     <TextView
@@ -67,8 +69,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="350dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginStart="25dp"
+        android:textSize="20dp"
+        android:textColor="@color/light_blue"
         android:text="300" />
 
     <Button

@@ -9,12 +9,12 @@
     <ImageView
         android:id="@+id/planeImage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:src="@drawable/plane"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/tvJarName"
@@ -45,7 +45,7 @@
     <ImageView
         android:id="@+id/addWithImage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:src="@drawable/add_withdraw"
         app:layout_constraintTop_toBottomOf="@id/tvJarSum"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="100dp"
-        android:layout_height="140dp"
+        android:layout_height="150dp"
         app:layout_constraintTop_toTopOf="@id/addWithImage"
         app:layout_constraintStart_toStartOf="@id/addWithImage"
         android:alpha="0"/>
@@ -63,7 +63,7 @@
     <Button
         android:id="@+id/btnWithdraw"
         android:layout_width="120dp"
-        android:layout_height="140dp"
+        android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="@id/addWithImage"
         app:layout_constraintEnd_toEndOf="@id/addWithImage"
         android:alpha="0"/>

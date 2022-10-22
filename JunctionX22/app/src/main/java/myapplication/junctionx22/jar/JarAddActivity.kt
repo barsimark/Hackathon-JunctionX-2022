@@ -26,7 +26,7 @@ class JarAddActivity : AppCompatActivity() {
         binding = ActivityJarAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        convertCurrency("EUR", "USD")
+        convertCurrency("HUF", "JPY")
         fillTextViews()
 
         binding.etInput.doAfterTextChanged {

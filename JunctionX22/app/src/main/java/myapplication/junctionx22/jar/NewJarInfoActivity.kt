@@ -1,11 +1,10 @@
 package myapplication.junctionx22.jar
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import myapplication.junctionx22.R
+import androidx.appcompat.app.AppCompatActivity
+import myapplication.junctionx22.databinding.ActivityJarAddBinding.inflate
+import myapplication.junctionx22.databinding.ActivityJarBinding.inflate
 import myapplication.junctionx22.databinding.ActivityNewJarInfoBinding
 
 class NewJarInfoActivity : AppCompatActivity() {
@@ -21,10 +20,10 @@ class NewJarInfoActivity : AppCompatActivity() {
             finish()
         }
 
-        Glide.with(this)
+        /*Glide.with(this)
             .asGif()
             .load(R.raw.christmas_tree)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .into(binding.tvGif)
+            .into(binding.tvGif)*/
     }
 }

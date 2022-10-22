@@ -1,7 +1,7 @@
 package myapplication.junctionx22.model
 
 object Globals {
-    private var jarName: String = "The"
+    private var jarName: String = "Toby"
     private var target: Int = 350000
 
     fun setJarName(name: String){

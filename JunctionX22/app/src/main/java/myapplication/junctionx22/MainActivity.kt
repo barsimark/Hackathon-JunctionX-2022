@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        binding.tvName.text = Globals.getJarName()
-        binding.tvSum.text = JarItemManager.getSum().toString()
+        //binding.tvName.text = Globals.getJarName()
+        binding.tvSum.text = JarItemManager.getSum().toString() + " JPY"
     }
 }

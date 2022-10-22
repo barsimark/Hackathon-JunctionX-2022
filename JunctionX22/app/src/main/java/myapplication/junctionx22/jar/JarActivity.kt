@@ -22,6 +22,12 @@ class JarActivity : AppCompatActivity() {
             startActivity(Intent(this, JarAddActivity::class.java))
         }
 
+        //initRecyclerView()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         initRecyclerView()
     }
 

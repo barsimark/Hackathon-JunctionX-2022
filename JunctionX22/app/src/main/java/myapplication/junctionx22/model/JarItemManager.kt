@@ -11,5 +11,8 @@ object JarItemManager {
         items.add(item)
     }
 
-    fun getItems() = items
+    fun getItems(): MutableList<JarItem> {
+        val reversed: MutableList<JarItem> = items.reversed().toMutableList()
+        return reversed
+    }
 }

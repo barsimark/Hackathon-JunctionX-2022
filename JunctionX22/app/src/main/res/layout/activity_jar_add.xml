@@ -13,7 +13,8 @@
         android:id="@+id/etInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input"/>
+        android:inputType="numberDecimal"
+        android:autofillHints="Input" />
 
     <TextView
         android:id="@+id/tvInput"
@@ -35,5 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="3" />
+
+    <Button
+        android:id="@+id/btnAddToJar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add money to jar"
+        android:enabled="false"/>
 
 </LinearLayout>

@@ -16,7 +16,7 @@ class NewJarCategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnPlant.setOnClickListener {
-            startActivity(Intent(this, NewJarCurrencyActivity::class.java))
+            startActivity(Intent(this, NewJarInfoActivity::class.java))
             finish()
         }
     }

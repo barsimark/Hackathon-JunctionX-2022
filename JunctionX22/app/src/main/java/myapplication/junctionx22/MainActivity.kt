@@ -13,6 +13,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import myapplication.junctionx22.databinding.ActivityMainBinding
 import myapplication.junctionx22.jar.JarActivity
+import myapplication.junctionx22.jar.NewJarCategoryActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, JarActivity::class.java))
         }
         binding.btnAddNewJar.setOnClickListener {
-            Toast.makeText(this, "Add new jar button", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this, NewJarCategoryActivity::class.java))
         }
     }
 }

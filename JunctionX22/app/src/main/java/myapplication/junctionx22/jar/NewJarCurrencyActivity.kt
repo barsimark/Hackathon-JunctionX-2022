@@ -1,5 +1,6 @@
 package myapplication.junctionx22.jar
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,7 +20,8 @@ class NewJarCurrencyActivity : AppCompatActivity() {
         }
 
         binding.btnJPY.setOnClickListener {
-
+            startActivity(Intent(this, NewJarSettingsActivity::class.java))
+            finish()
         }
     }
 }

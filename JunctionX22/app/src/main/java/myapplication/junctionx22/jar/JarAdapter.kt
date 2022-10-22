@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import myapplication.junctionx22.R
 import myapplication.junctionx22.databinding.ItemJarListBinding
 import myapplication.junctionx22.model.JarItem
 
@@ -21,6 +22,13 @@ class JarAdapter: RecyclerView.Adapter<JarAdapter.JarViewHolder>() {
 
         holder.binding.tvTitle.text = jarItem.title
         holder.binding.tvMoney.text = jarItem.sum.toString()
+
+        holder.binding.ivIcon.setImageResource(
+            when (jarItem.title){
+                "Add money directly" -> R.drawable.add_money_directly
+                else -> R.drawable.card_transaction
+            }
+        )
     }
 
     @SuppressLint("NotifyDataSetChanged")

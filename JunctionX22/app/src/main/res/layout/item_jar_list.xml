@@ -2,26 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
     android:orientation="horizontal"
     android:paddingBottom="8dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="8dp"
-    android:weightSum="2">
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@mipmap/ic_launcher"/>
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        tools:text="Budapest" />
+        android:layout_weight="5"
+        android:layout_gravity="center"
+        android:fontFamily="@font/wise_extrabold_font"
+        android:textSize="20dp"
+        tools:text="Budapest"
+        android:layout_marginStart="10dp"/>
 
     <TextView
         android:id="@+id/tvMoney"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:fontFamily="@font/wise_extrabold_font"
+        android:textSize="20dp"
         tools:text="1000" />
 
 </LinearLayout>

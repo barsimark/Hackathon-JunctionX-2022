@@ -29,27 +29,5 @@ class MainActivity : AppCompatActivity() {
         binding.btnAddNewJar.setOnClickListener {
             Toast.makeText(this, "Add new jar button", Toast.LENGTH_LONG).show()
         }
-
-        convertCurrency()
-    }
-
-    private fun convertCurrency() {
-        NetworkManager.convert("EUR", "USD")?.enqueue(object : Callback<List<CurrencyConvertion?>> {
-            override fun onResponse(
-                call: Call<List<CurrencyConvertion?>>,
-                response: Response<List<CurrencyConvertion?>>
-            ) {
-                Log.d("TAG", "onResponse: " + response.code())
-                Toast.makeText(this@MainActivity, "Message: " + response.body(), Toast.LENGTH_LONG).show()
-            }
-
-            override fun onFailure(
-                call: Call<List<CurrencyConvertion?>>,
-                throwable: Throwable
-            ) {
-                throwable.printStackTrace()
-                Toast.makeText(this@MainActivity, "Network request error occured, check LOG", Toast.LENGTH_LONG).show()
-            }
-        })
     }
 }

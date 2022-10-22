@@ -25,8 +25,23 @@
         android:layout_marginTop="208dp"
         android:autofillHints="Input"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="473dp"
+        android:layout_marginStart="22dp"
+        android:text="PlanT"
+        android:background="@android:color/transparent"
+        android:autofillHints="Input" />
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="PlanT"/>
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="170dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="" />
 
     <Button
         android:id="@+id/btnConfirm"

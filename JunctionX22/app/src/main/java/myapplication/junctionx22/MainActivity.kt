@@ -1,5 +1,6 @@
 package myapplication.junctionx22
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import myapplication.junctionx22.databinding.ActivityMainBinding
+import myapplication.junctionx22.jar.JarActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 		setContentView(binding.root)
 
         binding.btnExistingJar.setOnClickListener {
-            Toast.makeText(this, "Existing jar button", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this, JarActivity::class.java))
         }
         binding.btnAddNewJar.setOnClickListener {
             Toast.makeText(this, "Add new jar button", Toast.LENGTH_LONG).show()

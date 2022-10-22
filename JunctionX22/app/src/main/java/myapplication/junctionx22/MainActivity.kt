@@ -15,6 +15,8 @@ import myapplication.junctionx22.databinding.ActivityMainBinding
 import myapplication.junctionx22.jar.DiscountDialogFragment
 import myapplication.junctionx22.jar.JarActivity
 import myapplication.junctionx22.jar.NewJarCategoryActivity
+import myapplication.junctionx22.model.Globals
+import myapplication.junctionx22.model.JarItemManager
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,5 +33,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnAddNewJar.setOnClickListener {
             startActivity(Intent(this, NewJarCategoryActivity::class.java))
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        binding.tvName.text = Globals.getJarName()
+        binding.tvSum.text = JarItemManager.getSum().toString()
     }
 }
